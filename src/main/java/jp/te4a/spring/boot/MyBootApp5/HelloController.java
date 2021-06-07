@@ -21,6 +21,7 @@ public class HelloController{
     public ModelAndView postForm(@RequestParam("text1") String text1){
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("msg", String.format("you write %s!!!",text1));
+        System.out.println(mv);
         return mv;
     }
 }
