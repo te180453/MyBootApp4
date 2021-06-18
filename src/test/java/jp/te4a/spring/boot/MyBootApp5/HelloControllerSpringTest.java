@@ -51,29 +51,26 @@ public class HelloControllerSpringTest {
         mockMvc.perform(get("/"))
         .andExpect(status().is2xxSuccessful())
         .andExpect(view().name("index"))
-        .andExpect(model().attributeExists("msg"))
-        .andExpect(model().attribute("msg", "this is a setting message"))
-        .andExpect(content().string(containsString("this is a setting message")))
         .andReturn();
     }
 
-    @Test
-    public void postする() throws Exception{
-        mockMvc.perform(
-            post("/post").
-            param("text1","hogehoge")
-            )
-            .andExpect(status().isOk())
-            .andExpect(model().attributeExists("msg"))
-            .andExpect(
-                model().attribute(
-                    "msg", 
-                    String.format("you write %s!!!","hogehoge") 
-                    ))
-            .andExpect(view().name("index"))
-            .andExpect(content().string(containsString(
-                String.format("you write %s!!!","hogehoge") 
-                )))
-            .andReturn();
-    }
+    // @Test
+    // public void postする() throws Exception{
+    //     mockMvc.perform(
+    //         post("/post").
+    //         param("text1","hogehoge")
+    //         )
+    //         .andExpect(status().isOk())
+    //         .andExpect(model().attributeExists("msg"))
+    //         .andExpect(
+    //             model().attribute(
+    //                 "msg", 
+    //                 String.format("you write %s!!!","hogehoge") 
+    //                 ))
+    //         .andExpect(view().name("index"))
+    //         .andExpect(content().string(containsString(
+    //             String.format("you write %s!!!","hogehoge") 
+    //             )))
+    //         .andReturn();
+    // }
 }
