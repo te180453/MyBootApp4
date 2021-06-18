@@ -9,8 +9,6 @@ import org.junit.Test;
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
 
-import jp.te4a.spring.boot.MyBootApp5.HelloController;
-
 /**
  * Unit test for simple App.
  */
