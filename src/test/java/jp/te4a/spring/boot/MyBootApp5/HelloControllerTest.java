@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 /**
  * Unit test for simple App.
  */
+// NOTE これはテスト対象外
 public class HelloControllerTest
 {
     HelloController hc = new HelloController();
